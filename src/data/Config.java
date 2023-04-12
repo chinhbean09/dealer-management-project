@@ -5,7 +5,7 @@ import tools.MyTool;
 
 public class Config {
     // Hằng số này được sử dụng để định vị tệp tin cấu hình của ứng dụng.
-    private static final String CONFIG_FILE = "DealerData/config.txt";
+    private static final String CONFIG_FILE = "src/DealerData/config.txt";
     private String accountFile;
     private String dealerFile;
     private String deliveryFile;
