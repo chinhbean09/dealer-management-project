@@ -1,15 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package mng;
-
-
-/**
- *
- * @author chinh
- */
-public class Menu {
+import java.util.ArrayList;
+public class Menu extends ArrayList<String> {
+    public Menu(){
+        super();
+    }
+    public Menu(String[] items){
+        super();
+        for(String item: items) this.add(item);
+    }
+    public int getChoice(String title){
+        
+    }
     
 }
