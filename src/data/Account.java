@@ -31,6 +31,5 @@ public class Account {
     public String getRole() {
         return role;
     }
-    
-}
 
+}
