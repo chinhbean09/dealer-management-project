@@ -9,8 +9,19 @@ public class Menu extends ArrayList<String> {
         super();
         for(String item: items) this.add(item);
     }
-    public int getChoice(String title){
-        
-    }
-    
+   public static int getChoice(String title) {
+    int choice = 0;
+    boolean valid = false;
+    do {
+        try {
+            System.out.println(title);
+            choice = Integer.parseInt(System.console().readLine());
+            valid = true;
+        } catch (NumberFormatException e) {
+            System.out.println("Nhập không hợp lệ. Vui lòng nhập số.");
+        }
+    } while (!valid);
+    return choice;
+}
+
 }
