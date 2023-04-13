@@ -1,5 +1,6 @@
 package tools;
 
+import data.Dealer;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileReader;
@@ -150,18 +151,44 @@ public class MyTool {
      * Close the file
      * ghi các dữ liệu đã được khai báo của object vào 1 tệp
      */
-    public static void writeFile(String filename, List<String> list) {
-        try {
-            BufferedWriter writer = new BufferedWriter(new FileWriter(filename));
-            for (String item : list) {
-                writer.write(item);
-                writer.newLine();
-            }
-            writer.close();
-        } catch (IOException e) { // ngoại lệ được sinh ra bởi các hoạt động I/O
-            e.printStackTrace();// in ra lỗi
+//    public static void writeFile(String filename, List<String> list) {
+//        try {
+//            BufferedWriter writer = new BufferedWriter(new FileWriter(filename));
+//            for (String item : list) {
+//                writer.write(item);
+//                writer.newLine();
+//            }
+//            writer.close();
+//        } catch (IOException e) { // ngoại lệ được sinh ra bởi các hoạt động I/O
+//            e.printStackTrace();// in ra lỗi
+//        }
+//    }
+
+//    public static void writeFile(String filename, List<Dealer> dealerList) {
+//    try {
+//        BufferedWriter writer = new BufferedWriter(new FileWriter(filename));
+//        for (Dealer dealer : dealerList) {
+//            writer.write(dealer.toString());
+//            writer.newLine();
+//        }
+//        writer.close();
+//    } catch (IOException e) { 
+//        e.printStackTrace();
+//    }
+//}
+    public static void writeFile(String filename, List<Dealer> list) {
+    try {
+        BufferedWriter writer = new BufferedWriter(new FileWriter(filename));
+        for (Object item : list) {
+            writer.write(item.toString());
+            writer.newLine();
         }
+        writer.close();
+    } catch (IOException e) { 
+        e.printStackTrace();
     }
+}
+
 
     public static void main(String[] args) {
         // //Phone: 9 or 11 digits -OK

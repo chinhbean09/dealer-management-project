@@ -37,20 +37,20 @@ public class AccountChecker {
         return false;
     }
 
-    public static void main(String[] args) {
-        try {
-            AccountChecker aChk = new AccountChecker();
-            Account acc = new Account("E001", "12345678", "BOSS");
-            boolean valid = aChk.check(acc);
-            System.out.println("Needs OK, OK?: " + valid);
-            acc = new Account("E002", "23456789", "ACC-1");
-            valid = aChk.check(acc);
-            System.out.println("Needs OK, OK?: " + valid);
-            acc = new Account("E003", "123456789", "ACC-2");
-            valid = aChk.check(acc);
-            System.out.println("Needs OK, OK?: " + valid);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+//    public static void main(String[] args) {
+//        try {
+//            AccountChecker aChk = new AccountChecker();
+//            Account acc = new Account("E001", "12345678", "BOSS");
+//            boolean valid = aChk.check(acc);
+//            System.out.println("Needs OK, OK?: " + valid);
+//            acc = new Account("E002", "23456789", "ACC-1");
+//            valid = aChk.check(acc);
+//            System.out.println("Needs OK, OK?: " + valid);
+//            acc = new Account("E003", "123456789", "ACC-2");
+//            valid = aChk.check(acc);
+//            System.out.println("Needs OK, OK?: " + valid);
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//    }
 }
