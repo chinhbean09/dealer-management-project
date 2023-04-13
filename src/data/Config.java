@@ -26,14 +26,14 @@ public class Config {
             line = line.toUpperCase();
             String[] parts = line.split(":");
             if (line.indexOf("ACCOUNT") >= 0)
-                accountFile = "DealerData/" + parts[1].trim();
+                accountFile = "src/DealerData/" + parts[1].trim().toLowerCase();
             // hàm sẽ cập nhật giá trị của biến accountFile bằng cách lấy phần tử thứ hai
             // trong mảng parts sau khi đã split, thêm vào đường dẫn tương đối đến thư mục
             // "DealerData".
             else if (line.indexOf("DEALER") >= 0)
-                dealerFile = "DealerData/" + parts[1].trim();
+                dealerFile = "src/DealerData/" + parts[1].trim().toLowerCase();
             else if (line.indexOf("DELIVER") >= 0)
-                deliveryFile = "DealerData/" + parts[1].trim();
+                deliveryFile = "src/DealerData/" + parts[1].trim().toLowerCase();
         }
         /*
          * config.txt

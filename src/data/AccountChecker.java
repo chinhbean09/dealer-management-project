@@ -17,7 +17,7 @@ public class AccountChecker {
         accFile = cR.getAccountFile();
     }
 
-    // Check validadity od an account
+    // Check validadity of an account
     // Phương thức này đọc dữ liệu từ file tài khoản được chỉ định trong biến
     // accFile
     public boolean check(Account acc) {
