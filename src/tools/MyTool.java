@@ -191,51 +191,51 @@ public class MyTool {
 
 
     public static void main(String[] args) {
-        // //Phone: 9 or 11 digits -OK
-        // System.out.println("Tests with phone number");
-        // System.out.println(validStr("094990559","\\d{9}|\\d{11}"));//t
-        // System.out.println(validStr("01234567891","\\d{9}|\\d{11}"));//t
-        // System.out.println(validStr("12345678","\\d{9}|\\d{11}"));//f
-        //
-        // //Test password - OK
-        // System.out.println(validPassword("qwerty",8));//f
-        // System.out.println(validPassword("qweqeqwASD",8));//f
-        // System.out.println(validPassword("123123412",8));//f
-        // System.out.println(validPassword("qbc123456",8));//f
-        // System.out.println(validPassword("qbc@123456",8));//t
-        //
-        // //ID format D000 - OK
-        // System.out.println("Tests with IDs:");
-        // System.out.println(validStr("A012","D\\d{3}"));//f
-        // System.out.println(validStr("10101","D\\d{3}"));//f
-        // System.out.println(validStr("D012","D\\d{3}"));//t
-        // System.out.println(validStr("D0001","D\\d{3}"));//f
-
-        // Test date format - OK
-        // Date d = parseDate("2022:12:07","yyyy:MM:dd");
-        // System.out.println(d);
-        // System.out.println(dataToStr(d,"dd/MM/yyyy"));//OK, dataToStr sử dụng phương
-        // thức format(date)để chuyển nó thành chuỗi đã chỉ định sẵn
-        // d = parseDate("12/07/2022","MM/dd/yyyy");
-        // System.out.println(d);
-        // d = parseDate("2022/07/12","yyyy/MM/dd");
-        // System.out.println(d);
-        // d = parseDate("2000/29/02","yyyy/MM/dd");
-        // System.out.println(d);
-        // d = parseDate("2012/30/02","yyyy/MM/dd");
-        // System.out.println(d);
-        // d = parseDate("2000/40/16","yyyy/MM/dd");
-        // System.out.println(d);
-
-        // Text input data - OK
-        // String input = readNonBlank("Input a non-blank string");
-        // System.out.println(input);
-        // input = readPattern("Phone 9/11 digits","\\d{9}|\\d{11}");
-        // System.out.println(input);
-        // input = readPattern("ID-format X00000","X\\d{5}");
-        // System.out.println(input);
-        // boolean b = parseBool("Input boolean");
-        // System.out.println(b);
+//         //Phone: 9 or 11 digits -OK
+//         System.out.println("Tests with phone number");
+//         System.out.println(validStr("094990559","\\d{9}|\\d{11}"));//t
+//         System.out.println(validStr("01234567891","\\d{9}|\\d{11}"));//t
+//         System.out.println(validStr("12345678","\\d{9}|\\d{11}"));//f
+//        
+//         //Test password - OK
+//         System.out.println(validPassword("qwerty",8));//f
+//         System.out.println(validPassword("qweqeqwASD",8));//f
+//         System.out.println(validPassword("123123412",8));//f
+//         System.out.println(validPassword("qbc123456",8));//f
+//         System.out.println(validPassword("qbc@123456",8));//t
+//        
+//         //ID format D000 - OK
+//         System.out.println("Tests with IDs:");
+//         System.out.println(validStr("A012","D\\d{3}"));//f
+//         System.out.println(validStr("10101","D\\d{3}"));//f
+//         System.out.println(validStr("D012","D\\d{3}"));//t
+//         System.out.println(validStr("D0001","D\\d{3}"));//f
+//
+//         //Test date format - OK
+//         Date d = parseDate("2022:12:07","yyyy:MM:dd");
+//         System.out.println(d);
+//         System.out.println(dataToStr(d,"dd/MM/yyyy"));//OK, dataToStr sử dụng phương
+//        // thức format(date)để chuyển nó thành chuỗi đã chỉ định sẵn
+//         d = parseDate("12/07/2022","MM/dd/yyyy");
+//         System.out.println(d);
+//         d = parseDate("2022/07/12","yyyy/MM/dd");
+//         System.out.println(d);
+//         d = parseDate("2000/29/02","yyyy/MM/dd");
+//         System.out.println(d);
+//         d = parseDate("2012/30/02","yyyy/MM/dd");
+//         System.out.println(d);
+//         d = parseDate("2000/40/16","yyyy/MM/dd");
+//         System.out.println(d);
+//
+//        // Text input data - OK
+//         String input = readNonBlank("Input a non-blank string");
+//         System.out.println(input);
+//         input = readPattern("Phone 9/11 digits","\\d{9}|\\d{11}");
+//         System.out.println(input);
+//         input = readPattern("ID-format X00000","X\\d{5}");
+//         System.out.println(input);
+//         boolean b = parseBool("Input boolean");
+//         System.out.println(b);
 
     }
 }

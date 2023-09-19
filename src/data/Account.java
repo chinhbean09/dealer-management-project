@@ -15,7 +15,7 @@ public class Account {
     private String role;
 
     public Account(String accName, String pwd, String role) {
-        this.accName = accName;
+        this.accName = accName; 
         this.pwd = pwd;
         this.role = role;
     }

@@ -40,10 +40,10 @@
         this.add(dealer);
        }
        }
-//  /nó sẽ đọc dữ liệu đại lý từ tệp được lưu trữ trước đó và tạo ra một danh sách các đại lý trong chương trình từ dữ liệu đó
+//nó sẽ đọc dữ liệu đại lý từ tệp được lưu trữ trước đó và tạo ra một danh sách các đại lý trong chương trình từ dữ liệu đó
        public void initWithFile(){
         Config cR = new Config();//vì contructor của Config() có readData về tệp chứa danh sách đại lý
-        dataFile = cR.getDealerFile(); //get file containing dealer
+        dataFile = cR.getDealerFile(); //get address file containing dealer
     // getDealerFile để lấy tên tệp dữ liệu chứa danh sách đại lý và lưu vào biến dataFile
         loadDealerFromFile();//để đọc data dealer từ file và thêm vào Dealer file
        }
@@ -124,12 +124,12 @@
             if(pos >= 0) System.out.println("ID is duplicated!");
         }
         while (pos >= 0);
-        name = MyTool.readNonBlank("Name of new dealer: ".toUpperCase());
-        addr = MyTool.readNonBlank("Address of new dealer: ");
+        name = MyTool.readNonBlank("Name of new dealer ".toUpperCase());
+        addr = MyTool.readNonBlank("Address of new dealer ");
         phone = MyTool.readPattern("Phone number", Dealer.PHONE_FORMAT);
         continuing = true; //default value for new dealer
         Dealer d = new Dealer(ID,name,addr,phone,continuing);
-        this.add(d);
+        this.add(d); //add d vào dealer và sẽ được lưu vào list DealerList
         System.out.println("New dealer has been added");
         changed = true;
     }

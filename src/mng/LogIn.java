@@ -8,20 +8,17 @@ import tools.MyTool;
 
 public class LogIn {
 
-    private Account acc = null;//account will log in
+    private Account acc = null;
 
-    // giá trị ban đầu là null. Biến "acc" được sử dụng để lưu trữ đối tượng của lớp
-    // "Account" mà đối tượng của lớp "LogIn" sử dụng để đăng nhập
+    // giá trị ban đầu là null. Biến "acc" được sử dụng để lưu trữ đối tượng của lớp "Account" 
+    //  mà đối tượng của lớp "LogIn" sử dụng để đăng nhập
     public LogIn(Account acc) {
         this.acc = acc;
     }
-
     /*Input data of an account
     Create new Account 
     return this Account
 //  trả về một đối tượng mới của lớp Account.
-
-
      */
     public static Account inputAccount() {
         Scanner sc = new Scanner(System.in);
@@ -55,8 +52,9 @@ public class LogIn {
             if (!valid && !cont) System.exit(0); //quit the program
             
         }while(cont);
-        LogIn loginObj = new LogIn(acc);//create a login obj for valid acc
-        //Run Dealer manager
+        LogIn loginObj = new LogIn(acc); 
+        //loginObj sẽ giữ đối tượng acc đó và cho phép truy cập đến các phương thức và thuộc tính của đối tượng acc.
+        //acc chính là thông tin tài khoản mà ta muốn sử dụng để đăng nhập vào hệ thống.
         if(acc.getRole().equalsIgnoreCase("ACC-1")){
             //Setup menu
             String[] options = {"Add new dealer","Search a dealer",
@@ -64,17 +62,18 @@ public class LogIn {
                 "Print all dealer", "Print continuing dealers",
                 "Print UN_continuing dealers", "Write to file"  
             };
-            Menu mnu = new Menu(options);
-            DealerList dList = new DealerList(loginObj); //Setup DealerList
-            dList.initWithFile();
+            Menu mnu = new Menu(options); //add vào list Menu và gán cho mnu
+            DealerList dList = new DealerList(loginObj); //Setup DealerList, làm cho người đăng nhập có quyền hạng để tác động tới dealer
+            dList.initWithFile();//DealerList có data của dealerFile từ dealer(có nv gán từng hàng data trong dealerFile)
             int choice = 0;
             do{//Do activities 
+                mnu.printMenu();
                 choice = mnu.getChoice("Managing dealers");
                 switch(choice){
                     case 1: dList.addDealer();break;
                     case 2: dList.searchDealer();break;
                     case 3: dList.removeDealer();break;
-                    case 4: dList.updateDealer();break;
+                    case 4: dList.updateDealer();break; 
                     case 5: dList.printAllDealer();break;
                     case 6: dList.printContinuingDealers();break;
                     case 7: dList.printUnContinuingDealers();break;

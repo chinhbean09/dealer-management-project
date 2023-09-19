@@ -18,8 +18,7 @@ public class AccountChecker {
     }
 
     // Check validadity od an account
-    // Phương thức này đọc dữ liệu từ file tài khoản được chỉ định trong biến
-    // accFile
+    // Phương thức này đọc dữ liệu từ file tài khoản được chỉ định trong biến accFile
     public boolean check(Account acc) {
         List<String> lines = MyTool.readLinesFromFile(accFile);
         // phương thức này trả về một List các chuỗi đại diện cho từng dòng trong file.
@@ -52,5 +51,5 @@ public class AccountChecker {
 //        } catch (Exception e) {
 //            e.printStackTrace();
 //        }
-//    }
+// }
 }
